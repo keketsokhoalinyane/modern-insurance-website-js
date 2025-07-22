@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-red: #dc2626;
+  --dark-red: #991b1b;
+  --light-red: #ef4444;
+}
+
+body {
+  background: linear-gradient(135deg, #000000 0%, #1a0000 100%);
+}
+
+.gradient-red {
+  background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
+}
+
+.card-dark {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.swipe-card {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.swipe-card.swiping-left {
+  transform: translateX(-100px) rotate(-10deg);
+  opacity: 0.5;
+}
+
+.swipe-card.swiping-right {
+  transform: translateX(100px) rotate(10deg);
+  opacity: 0.5;
+}
